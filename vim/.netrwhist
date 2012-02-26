@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/ryandotsmith/src/h/shushu/test/services'
+let g:netrw_dirhist_2='/home/ryandotsmith/src/h/shushu/test'
+let g:netrw_dirhist_3='/home/ryandotsmith/src/h/shushu/test/services'
+let g:netrw_dirhist_4='/home/ryandotsmith/doc/vault/projects/layer0'

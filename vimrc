@@ -1,4 +1,5 @@
 scriptencoding utf-8
+
 "-------------------------------
 " Colors & Font
 "-------------------------------
@@ -13,19 +14,14 @@ colorscheme simplecolor
 let mapleader = ","
 imap ii <Esc>
 imap <C-l> <Space>=><Space>
-vmap <leader>t<C-l> :Align =><CR>
-map <silent> <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>  " Toggle NERDTree with <leader>d
-map <silent> <leader>b :execute 'MiniBufExplorer' . getcwd()<CR>
 
 "-------------------------------
 " Text Formatting
 "-------------------------------
 set autoindent
-set smartindent
 set softtabstop=2
 set shiftwidth=2
 set tabstop=4
-set textwidth=80
 set expandtab
 set nowrap
 
@@ -55,8 +51,8 @@ au BufRead,BufNewFile *.ru         set ft=ruby
 au BufRead,BufNewFile *.rtxt       set ft=html spell
 au BufRead,BufNewFile *.sql        set ft=pgsql
 au BufRead,BufNewFile *.haml       set ft=haml
-au BufRead,BufNewFile *.md         set ft=mkd ts=2 sw=2 expandtab
-au BufRead,BufNewFile *.markdown   set ft=mkd ts=2 sw=2 expandtab spell
+au BufRead,BufNewFile *.md         set ft=mkd ts=2 sw=2 wrap
+au BufRead,BufNewFile *.markdown   set ft=mkd ts=2 sw=2 spell
 au BufReadPre,BufNewFile *.go      set ft=go noet nolist ts=4 sw=4 fileencoding=utf-8 fileencodings=utf-8
 au Filetype gitcommit set spell
 au Filetype ruby      set ts=2 sw=2 expandtab

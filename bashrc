@@ -85,11 +85,7 @@ function ct()
 
 function shoot()
 {
-  local activeWinLine=$(xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)")
-  local activeWinId=${activeWinLine:40}
-  local date_string=$(date +%F_%H%M%S_%N)
-  import -window "$activeWinId" /tmp/"$date_string.png"
-  feh /tmp/"$date_string.png"
+  scrot '%Y-%m-%d_%H:%M:%S.png' -s -e 'cloudapp upload $f | xsel -i -b -p; rm $f'
 }
 
 function lock()

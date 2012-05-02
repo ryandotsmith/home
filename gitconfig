@@ -1,0 +1,23 @@
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[color "branch"]
+	current = yellow bold
+	remote = cyan bold
+[color "diff"]
+	new = green bold
+	old = red bold
+	meta = black
+	frag = white bold
+	commit = white bold
+[color "status"]
+	added = green bold
+	changed = yellow
+	untracked = red bold
+[user]
+	name = Ryan Smith (ace hacker)
+	email = ryandotsmith@32k.io
+[github]
+	user = ryandotsmith

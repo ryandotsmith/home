@@ -1,9 +1,3 @@
-#
-# ~/.bashrc
-#
-
-TERM=xterm-256color
-
 set -o vi
 
 # If not running interactively, don't do anything
@@ -17,11 +11,14 @@ PS1='[ \W $(__git_ps1 "%s") ] '
 export EDITOR=vim
 export CLICOLOR=1
 
-# renam caps lock to ctrl
-setxkbmap -option ctrl:nocaps
+if [ $OSTYPE != 'darwin11' ]
+then
+  # renam caps lock to ctrl
+  setxkbmap -option ctrl:nocaps
+  alias ls="ls --color=auto"
+fi
 
 # Alias'
-alias ls="ls --color=auto"
 alias vi="vim"
 alias doc="rlwrap ~/src/docbrown/bin/docbrown"
 alias be="bundle exec"
@@ -40,7 +37,7 @@ export GOROOT="$HOME/local/go"
 export GOPATH=$HOME
 
 # TAT(1)
-export CODE_ROOT_DIRS="/home/ryandotsmith/src"
+export CODE_ROOT_DIRS="$HOME/src"
 source ~/src/tat/tat.sh
 
 # Move config vars from one heroku app to another
@@ -86,11 +83,6 @@ function ct()
 function shoot()
 {
   scrot '%Y-%m-%d_%H:%M:%S.png' -s -e 'cloudapp upload $f | xsel -i -b -p; rm $f'
-}
-
-function lock()
-{
-  xscreensaver-command -activate
 }
 
 function todo()
